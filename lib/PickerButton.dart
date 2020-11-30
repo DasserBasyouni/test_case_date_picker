@@ -1,4 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
+//import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -58,13 +58,13 @@ class _ProjectPickerButtonState extends State<ProjectPickerButton> {
           ),
           Expanded(
             child: Material(
-              color: Colors.transparent,
-              child: Text(
-                pickedDateTimeStr == null ? widget.text : pickedDateTimeStr,
-                style: TextStyle(color: Colors.black54, fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ).tr(),
-            ),
+                color: Colors.transparent,
+                child: Text(
+                  pickedDateTimeStr == null ? widget.text : pickedDateTimeStr,
+                  style: TextStyle(color: Colors.black54, fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
+                ) //.tr(),
+                ),
           ),
           SizedBox(
             width: 10,
@@ -141,7 +141,7 @@ class _ProjectPickerButtonState extends State<ProjectPickerButton> {
   Future<DateTime> pickDate() async {
     return await showDatePicker(
         context: context,
-        locale: Locale('ar'),
+        //locale: Locale('ar'),
         initialDate: DateTime.now(),
         initialDatePickerMode: DatePickerMode.day,
         firstDate: DateTime.now(),

@@ -1,16 +1,16 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'PickerButton.dart';
 
 void main() {
-  runApp(
+  runApp(MyApp());
+  /*runApp(
     EasyLocalization(
         supportedLocales: [Locale('en'), Locale('ar')],
         path: 'assets/translations', // <-- change patch to your
         fallbackLocale: Locale('ar'),
         child: MyApp()),
-  );
+  );*/
 }
 
 class MyApp extends StatelessWidget {
@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
+      //localizationsDelegates: context.localizationDelegates,
+      //supportedLocales: context.supportedLocales,
+      //locale: context.locale,
       theme: ThemeData(
         // This is the theme of your application.
         //
